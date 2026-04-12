@@ -25,10 +25,10 @@ int stack_pop(struct Stack *stack)
     if (stack->count > 0)
     {
         int value = stack->arr[stack->count - 1];
-        stack->arr[--stack->count] = '\0';
+        stack->arr[--stack->count] = 0;
         return value;
     }
-    return '\0';
+    return 0;
 }
 
 int stack_peek(struct Stack stack)
@@ -37,7 +37,7 @@ int stack_peek(struct Stack stack)
     {
         return stack.arr[stack.count - 1];
     }
-    return '\0';
+    return 0;
 }
 
 void stack_print(struct Stack stack)
