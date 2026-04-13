@@ -108,7 +108,7 @@ int parse_rpn(char *input, int *err)
                 break;
             default:
                 *err = 1;
-                printf("unknown operand. abort\n");
+                printf("unknown operator. abort\n");
                 return 0;
             }
         }
