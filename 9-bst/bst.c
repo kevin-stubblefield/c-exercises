@@ -111,11 +111,7 @@ static void recursive_free(struct Tree *tree, struct TreeNode *node) {
 
   recursive_free(tree, node->left);
   recursive_free(tree, node->right);
-  if (tree->free_element) {
-    tree->free_element(node->data);
-  }
-  free(node);
-  node = NULL;
+  destroy_node(&node, tree);
 }
 
 void bst_free(struct Tree *tree) {
